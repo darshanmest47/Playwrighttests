@@ -89,7 +89,7 @@ test("Verification of getByPlaceholder1 button",async({page})=>{
 test("Verification of getByTitle",async({page})=>{
          await page.goto("https://testautomationpractice.blogspot.com/p/playwrightpractice.html")
          await page.getByTitle("Home page link").click()
-         await page.waitForTimeout(15000);
+         await page.waitForTimeout(5000);
 
 })
 
@@ -100,6 +100,6 @@ test("Verification of getByTitle",async({page})=>{
 test("Verification of getByTestId",async({page})=>{
          await page.goto("https://testautomationpractice.blogspot.com/p/playwrightpractice.html")
          await page.getByTestId("edit-profile-btn").click()
-         await page.waitForTimeout(15000);
+         await page.waitForTimeout(5000);
 
 })
