@@ -3,7 +3,7 @@ import {test,expect,Locator} from "@playwright/test"
 /* getByRole */
 test("Verification of getByRole locator",async({page})=>{
       await page.goto("https://testautomationpractice.blogspot.com/p/playwrightpractice.html")
-      page.getByRole("textbox",{name:'Username:'}).fill("Darshan")
+      await page.getByRole("textbox",{name:'Username:'}).fill("Darshan")
 
 })
 
@@ -46,7 +46,7 @@ test("Verification of getByLabel",async({page})=>{
 
 test("Verification of getByLabel password regex",async({page})=>{
          await page.goto("https://testautomationpractice.blogspot.com/p/playwrightpractice.html")
-         await page.getByLabel(/password: /i).fill("password")
+         await page.getByLabel(/password:/i).fill("password")
          await page.waitForTimeout(5000);
 
 })
