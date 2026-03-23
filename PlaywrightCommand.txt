@@ -1,3 +1,13 @@
  //Sample command to show how we can trigger playwright tests in different way
  
  npx playwright test --project chromium -g "URl" --headed --debug
+
+ use: {
+    /* Base URL to use in actions like `await page.goto('')`. */
+    // baseURL: 'http://localhost:3000',
+
+    /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
+    trace: 'on-first-retry',
+    testIdAttribute:'data-rw'  /* if in future data-testId is changed to data-rw we need to update it in the use block and there is no need to write a new code for data-rw as a result of which 
+    our inspected locator will always work properly*/
+  },
