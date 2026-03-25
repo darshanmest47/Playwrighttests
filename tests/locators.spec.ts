@@ -51,9 +51,9 @@ test("Verification of getByLabel password regex",async({page})=>{
 
 })
 
-test("Verification of getByLabel radio button",async({page})=>{
+test("Verification of getByLabel standard radio button",async({page})=>{
          await page.goto("https://testautomationpractice.blogspot.com/p/playwrightpractice.html")
-         await page.getByLabel(/Standard/i).click()
+         await page.getByLabel(/\sStandard/i).click()
          await page.waitForTimeout(5000);
 
 })
